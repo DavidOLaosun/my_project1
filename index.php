@@ -1,4 +1,4 @@
-<?php include 'inc/functions.php'; ?>
+<?php include 'functions.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body style='background-color: <?php color(); ?>'>
+<body>
     <div class="container">
     <div id="quote-box">
-    <php printQuote(); ?>
-    </div>
+    <?php echo printQuote($quotes);
+        //echo $quotes[0]['quote'];
+    ?>
+    </div> 
     <button id="loadQuote" onclick="window.location.reload(true)" >Show another quote</button>
     </div>
 </body>
